@@ -2,7 +2,7 @@
 // Checked by Matthew (Aug 10)
 
 import React from 'react';
-import {StyleSheet, TextInput} from 'react-native';
+import {StyleSheet, TextInput, Text} from 'react-native';
 import {connect} from 'react-redux';
 import {Container} from 'native-base';
 import {colors} from '../../theme/colors';
@@ -15,18 +15,31 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.lightgray,
     justifyContent: 'center',
-    alignItems: 'center',
+    padding: 20,
   },
   textInput: {
-    alignItems: 'center',
-    textAlign: 'center',
     color: colors.black,
     fontSize: getFontSize(24),
     paddingVertical: dySize(5),
-    paddingRight: dySize(20),
+    paddingHorizontal: dySize(20),
+    borderColor: 'gray',
+    borderRadius: 4,
+    borderWidth: 1,
+    marginBottom: 10,
   },
   button: {
     marginTop: dySize(50),
+  },
+  label: {
+    fontSize: getFontSize(20),
+    color: colors.blue,
+    marginBottom: 5,
+  },
+  loadingText: {
+    fontSize: getFontSize(16),
+    color: colors.red,
+    marginTop: 15,
+    textAlign: 'center',
   },
 });
 
@@ -34,8 +47,8 @@ class WelcomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'matthew.sadler.9@gmail.com',
-      password: 'Matt!@3',
+      email: '',
+      password: '',
     };
   }
 
@@ -49,16 +62,20 @@ class WelcomeScreen extends React.Component {
 
   register = () => {
     const {email, password} = this.state;
+    if (email.length * password.length === 0) {
+      return;
+    }
     const param = {email, password};
     this.props.register(param);
+    // this.props.checkNebzyData();
   };
 
   render() {
     const {email, password} = this.state;
     return (
       <Container style={styles.container}>
+        <Text style={styles.label}>Email Address</Text>
         <TextInput
-          textAlign="center"
           onChangeText={this._onChangeInput('email')}
           style={styles.textInput}
           placeholder="Email Address"
@@ -67,8 +84,8 @@ class WelcomeScreen extends React.Component {
           keyboardType="email-address"
           autoCorrect={false}
         />
+        <Text style={styles.label}>Password</Text>
         <TextInput
-          textAlign="center"
           onChangeText={this._onChangeInput('password')}
           style={styles.textInput}
           placeholder="Password"
@@ -76,18 +93,26 @@ class WelcomeScreen extends React.Component {
           maxLength={40}
           autoCorrect={false}
         />
-        <Button text="Sign Up" onPress={this.register} style={styles.button} />
+        <Button text="John Us" onPress={this.register} style={styles.button} />
+        {this.props.loading && (
+          <Text style={styles.loadingText}>Loading...</Text>
+        )}
       </Container>
     );
   }
 }
 
+const mapStateToProps = state => ({
+  loading: state.routerReducer.isLoading,
+});
+
 const mapDispatchToProps = {
   passWelcome: userActions.passWelcome,
   register: userActions.register,
+  checkNebzyData: userActions.checkNebzyData,
 };
 
 export default connect(
-  undefined,
+  mapStateToProps,
   mapDispatchToProps,
 )(WelcomeScreen);

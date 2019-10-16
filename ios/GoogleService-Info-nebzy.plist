@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>653350756434-qe2jtpa3mlemj6nj2rf33edt3o931phg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.653350756434-qe2jtpa3mlemj6nj2rf33edt3o931phg</string>
+	<key>API_KEY</key>
+	<!-- <string>AIzaSyAkcyDd6FpUv4gFkhd31kxvc_Cx1cf8-80</string> -->
+	<string>AIzaSyC2ZOzHgWmIcRykS8bk1uhHX2EB7P1meZY</string>
+	<key>GCM_SENDER_ID</key>
+	<!-- <string>653350756434</string> -->
+	<string>806897739447</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.livebet</string>
+	<key>PROJECT_ID</key>
+	<!-- <string>livebet-26523</string> -->
+	<string>nebzy-36952</string>
+	<key>STORAGE_BUCKET</key>
+	<string>livebet-26523.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:653350756434:ios:57369535cf25ae3c69ff8b</string>
+	<key>DATABASE_URL</key>
+	<!-- <string>https://livebet-26523.firebaseio.com</string> -->
+	<string>https://nebzy-36952.firebaseio.com</string>
+</dict>
+</plist>

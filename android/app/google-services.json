@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "653350756434",
+    "firebase_url": "https://livebet-26523.firebaseio.com",
+    "project_id": "livebet-26523",
+    "storage_bucket": "livebet-26523.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653350756434:android:670dfc1d3425ed0a69ff8b",
+        "android_client_info": {
+          "package_name": "com.livebet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653350756434-spv28lt12ol3e50tej9qkrtjss6fppjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY01AsyjH5wIsK_4yJAZzmPfBD9XA7wIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653350756434-spv28lt12ol3e50tej9qkrtjss6fppjh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "653350756434-qe2jtpa3mlemj6nj2rf33edt3o931phg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.livebet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* LiveBetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LiveBetTests.m */; };
 		0F919F41207645E4A8CD9B10 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9F12F0652432B842D5D6A /* Zocial.ttf */; };
